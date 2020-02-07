@@ -166,7 +166,9 @@ var vanityTmpl = template.Must(template.New("vanity").Parse(`<!DOCTYPE html>
 <meta http-equiv="refresh" content="0; url=https://pkg.go.dev/{{.Import}}/{{.Subpath}}">
 </head>
 <body>
-Nothing to see here; <a href="https://pkg.go.dev/{{.Import}}/{{.Subpath}}">see the package on pkg.go.dev</a>.
+This page services requests from <pre>go get {{.Import}}</pre> invocations.
+
+The source code for this package is available at <pre>{{.Repo}}</pre>.
 </body>
 </html>`))
 
